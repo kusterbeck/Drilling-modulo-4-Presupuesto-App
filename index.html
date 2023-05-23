@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Presupuesto App</title>
+</head>
+<body>
+    <main class="container">
+        <h3>PRESUPUESTO APP</h3>
+        <div class="row">
+            <form class="presupuesto-box col m-3" id="form_1">
+
+                <div class="row mb-2 ">
+                    <label for="presupuesto">Ingresa Tu Presupuesto</label>
+                </div>
+                <div class="row mb-2">
+                    <input type="number" name="" id="presupuesto" min="0">
+                </div>
+                <div class="row mb-2">
+                    <button type="button" class="btn btn-outline-success" onclick="agregarPresupuesto();">Calcular</button>
+                </div>
+            </form>
+            <div class="balance-box col m-3">
+                <table>
+                    <tr>
+                        <th>PRESUPUESTO</th>
+                        <th>GASTOS</th>
+                        <th>SALDO</th>
+                    </tr>
+                    <tr>
+                        <td id="columna_presupuesto">$ 0</td>
+                        <td id="columna_gasto">$ 0</td>
+                        <td id="columna_saldo">$ 0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <form class="gasto-box col m-3" id="form_2" method="javascript: void(0)">
+                <div class="row mb-2">
+                    <label for="nombre_gasto">Ingresa El Nombre Del Gasto</label>
+                </div>
+                <div class="row mb-2">
+                    <input type="text" id="nombre_gasto">
+                </div>
+                <div class="row mb-2">
+                    <label for="gasto">Ingresa La Cantidad Del Gasto</label>
+                </div>
+                <div class="row mb-2">
+                    <input type="number" name="" id="gasto" min="0">
+                </div>
+                <div class="row mb-2">
+                    <button type="button" class="btn btn-outline-danger" onclick="agregarGasto();" disabled id="boton_gastos">Añadir Gasto</button>
+                </div> 
+            </form>
+            <div class="resumen-box col m-3">
+                <table id="tabla_gastos">
+                    <tr>
+                        <th>GASTO</th>
+                        <th>VALOR</th>
+                        <th class="eliminar_columna"></th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
